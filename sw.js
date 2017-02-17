@@ -29,6 +29,7 @@ self.addEventListener('fetch', function(event) {
         caches.match(event.request).then(function(response) {
             if (response) {
                 // retrieve from cache
+                alert(response.toString());
                 return response;
             }
             // fetch as normal
